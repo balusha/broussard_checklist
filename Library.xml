@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<SimBase.Document Type="CheckpointLibrary" version="1,0">
+	<Checklist.CheckpointLibrary>
+
+		<Checkpoint Id="Carbeurator_heating_if_needed">
+			<CheckpointDesc SubjectTT="Carbeurator heating"
+							ExpectationTT="If needed" />
+			<Instrument Id="DEICE_Engine" />
+		</Checkpoint>
+
+	</Checklist.CheckpointLibrary>
+</SimBase.Document>
