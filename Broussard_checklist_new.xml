@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<SimBase.Document Type="Checklist" version="1,0">
+    <Checklist.Checklist>
+
+        <!-- References to other libraries -->
+        <IncludeCheckpointLibrary FileName="CheckpointsLibrary\Asobo_DefaultCheckpointLibrary.xml" />
+        <IncludeCheckpointLibrary FileName="SimObjects\Airplanes\ATSimulations_Broussard_Aircraft\Checklist\Library.xml" />
+
+        <!-- ============= 1. PRE-FLIGHT ============= -->
+        <Page SubjectTT="TT:GAME.CHECKLIST_PREFLIGHT_INSPECTION_COCKPIT_1">
+            <Checkpoint ReferenceId="Magnetos_Off" />
+            <Checkpoint ReferenceId="Battery_Switch_Off" />
+            <Checkpoint ReferenceId="ALL_ELECTRICAL_EQUIPMENT_OFF" />
+            <Checkpoint ReferenceId="Cowl_Flaps_Closed" />
+            <Checkpoint ReferenceId="PROP_RPM_LEVER_MIN" />
+            <Checkpoint ReferenceId="Mixture_Lean" />
+            <Checkpoint ReferenceId="AUX_FUEL_PUMPS_OFF" />
+            <Checkpoint ReferenceId="Vacuum_Distributors_Open" />
+            <Checkpoint ReferenceId="PITOT_STATIC_ISO_VALVE_NORMAL" />
+            <Checkpoint ReferenceId="Generator_Switch_On" />
+            <Checkpoint ReferenceId="Parking_Brake_Set" />
+            <Checkpoint ReferenceId="Carb_Heat_Cold" />
+            <Checkpoint ReferenceId="Fuel_Selector_Both" />
+            <Checkpoint ReferenceId="Rudder_Test" />
+            <Checkpoint ReferenceId="CONTROL_STICK_FREE_AND_CORRECT_FULL_TRAVEL" />
+        </Page>
+
+        <!-- ============= 2. BEFORE STARTING ENGINE ============= -->
+        <Page SubjectTT="Before starting engine">
+            <Checkpoint ReferenceId="Main_circuit_breaker" />
+            <Checkpoint ReferenceId="Battery_Switch_On" />
+            <Checkpoint ReferenceId="Battery_voltage_gt_24v" />
+            <Checkpoint ReferenceId="Fuel_switch_open" />
+            <Checkpoint ReferenceId="Oil_switch_open" />
+            <Checkpoint ReferenceId="Cowl_Flaps_1_Centimeter" />
+            <Checkpoint ReferenceId="Mixture_Rich" />
+            <Checkpoint ReferenceId="PROP_RPM_LEVER_MAX" />
+            <Checkpoint ReferenceId="THROTTLE_1_CENTIMETER" />
+            <Checkpoint ReferenceId="Manifold_Pressure_Checked" />
+        </Page>
+
+        <!-- ============= 3. ENGINE START ============= -->
+        <Page SubjectTT="Engine start">
+            <Checkpoint ReferenceId="Magnetos_On" />
+            <Checkpoint ReferenceId="FUEL_PUMP_ON" />
+            <!-- Cold engine start block -->
+            <Checkpoint ReferenceId="Fuel_Injections_4times" />
+            <!-- Hot engine start block -->
+            <Checkpoint ReferenceId="Fuel_Injections_2times" />
+            <Checkpoint ReferenceId="Ignition_on" />
+            <!-- Notice we had two 'Ignition_on' checkpoints, e.g., switch cover.
+                 They can be merged or given separate IDs in the library, e.g.
+                 Ignition_on and Ignition_switch_cover. -->
+            <Checkpoint ReferenceId="Ignition_switch_cover" />
+            <Checkpoint ReferenceId="Starter_On" />
+        </Page>
+
+        <!-- ============= 4. WARM-UP ============= -->
+        <Page SubjectTT="Warm-up">
+            <Checkpoint ReferenceId="PROP_RPM_LEVER_MAX" />
+            <Checkpoint ReferenceId="Adjust_1200_RPM" />
+            <Checkpoint ReferenceId="FUEL_PUMP_OFF" />
+            <Checkpoint ReferenceId="Mixture_Rich" />
+            <Checkpoint ReferenceId="Oil_Temperature_Check" />
+        </Page>
+
+        <!-- ============= 5. BEFORE TAXI ============= -->
+        <Page SubjectTT="Before taxi">
+            <Checkpoint ReferenceId="LIGHTS_AS_REQUIRED" />
+            <Checkpoint ReferenceId="FLAPS_CHECK_FUNCTION_INDICATOR_SET_TO" />
+            <Checkpoint ReferenceId="Suction_CHECK" />
+            <Checkpoint ReferenceId="Clock_Set" />
+            <Checkpoint ReferenceId="Fire_indicator_lamp_tested" />
+            <Checkpoint ReferenceId="Low_fuel_level_lamp_left_tested" />
+            <Checkpoint ReferenceId="Low_fuel_level_lamp_right_tested" />
+            <Checkpoint ReferenceId="Pitot_heating_lamp_tested" />
+            <Checkpoint ReferenceId="Radio_checked" />
+            <Checkpoint ReferenceId="Attitude_indicator_free" />
+            <Checkpoint ReferenceId="Heading_Indicator_Set" />
+            <Checkpoint ReferenceId="Mixture_Rich" />
+            <Checkpoint ReferenceId="PROP_RPM_LEVER_MAX" />
+        </Page>
+
+        <!-- ============= 6. TAXI ============= -->
+        <Page SubjectTT="Taxi">
+            <Checkpoint ReferenceId="Wedges_removed" />
+            <Checkpoint ReferenceId="Parking_Brake_Release" />
+            <Checkpoint ReferenceId="Brakes_Test" />
+            <Checkpoint ReferenceId="Heading_Indicator_Check_Working" />
+            <Checkpoint ReferenceId="Attitude_Indicator_Check_Working" />
+        </Page>
+
+        <!-- ============= 7. BEFORE LINE-UP (OR BEFORE TAKEOFF) ============= -->
+        <Page SubjectTT="Before line-up">
+            <Checkpoint ReferenceId="Oil_Temperature_Check" />
+            <Checkpoint ReferenceId="Cylinder_Head_Temperature_Check" />
+            <Checkpoint ReferenceId="DIRECTIONAL_TRIM_CENTERED" />
+            <Checkpoint ReferenceId="Mixture_Rich" />
+            <Checkpoint ReferenceId="Adjust_1700_RPM" />
+            <Checkpoint ReferenceId="PROP_RPM_LEVER_CHECK_2_TIMES" />
+            <Checkpoint ReferenceId="Magneto_75_RPM_Max_Decrease_variant" />
+            <Checkpoint ReferenceId="Cowl_flap_closed_or_as_required" />
+            <Checkpoint ReferenceId="Oil_Pressure_Check" />
+            <Checkpoint ReferenceId="FUEL_PRESSURE_CHECK_NO_HIGHLIGHT" />
+            <Checkpoint ReferenceId="Suction_CHECK" />
+            <Checkpoint ReferenceId="Bus_Voltages_Check" />
+            <Checkpoint ReferenceId="Engine_Idle_Check_600-700_RPM" />
+        </Page>
+
+        <!-- ============= 8. NORMAL TAKEOFF ============= -->
+        <Page SubjectTT="Normal takeoff">
+            <Checkpoint ReferenceId="Parking_Brake_Release" />
+            <Checkpoint ReferenceId="Throttle_Full" />
+            <Checkpoint ReferenceId="ROTATION_MIN_XXX_KIAS" />
+        </Page>
+
+        <!-- ============= 9. CLIMB ============= -->
+        <Page SubjectTT="Climb">
+            <Checkpoint ReferenceId="INITIAL_CLIMB_MIN_XXX_KIAS_TEMPLATE" />
+            <Checkpoint ReferenceId="Adjust_105_pz" />
+            <Checkpoint ReferenceId="Adjust_2000_RPM" />
+            <!-- Above/Below 6000 ft blocks -->
+            <Checkpoint ReferenceId="Airspeed_75_KIAS" />
+            <Checkpoint ReferenceId="Airspeed_80_KIAS" />
+            <Checkpoint ReferenceId="Cowl_flaps_full_open" />
+            <Checkpoint ReferenceId="Oil_Temperature_Check_50_90" />
+            <Checkpoint ReferenceId="Carbeurator_heating_if_needed" />
+        </Page>
+
+        <!-- ============= 10. CRUISE ============= -->
+        <Page SubjectTT="Cruise">
+            <Checkpoint ReferenceId="Carbeurator_heating_if_needed" />
+            <Checkpoint ReferenceId="Mixture_Normal" />
+            <Checkpoint ReferenceId="Adjust_88_pz" />
+            <Checkpoint ReferenceId="Adjust_1900_RPM" />
+            <Checkpoint ReferenceId="Airspeed_100_KIAS" />
+        </Page>
+
+        <!-- ============= 11. DESCENT ============= -->
+        <Page SubjectTT="Descent">
+            <Checkpoint ReferenceId="Carbeurator_heating_if_needed" />
+            <Checkpoint ReferenceId="Mixture_Normal" />
+            <Checkpoint ReferenceId="Adjust_60_pz" />
+            <Checkpoint ReferenceId="Adjust_1700_RPM" />
+            <Checkpoint ReferenceId="Airspeed_100_KIAS" />
+        </Page>
+
+        <!-- ============= 12. BEFORE LANDING ============= -->
+        <Page SubjectTT="Before landing">
+            <Checkpoint ReferenceId="Parking_Brake_Release" />
+            <Checkpoint ReferenceId="Brakes_Test" />
+            <Checkpoint ReferenceId="Mixture_Rich" />
+            <Checkpoint ReferenceId="FUEL_PRESSURE_CHECK_NO_HIGHLIGHT" />
+            <Checkpoint ReferenceId="Fuel_Selector_Both" />
+        </Page>
+
+        <!-- ============= 13. DOWNWIND ============= -->
+        <Page SubjectTT="Downwind">
+            <Checkpoint ReferenceId="Flaps_Position_2" />
+            <Checkpoint ReferenceId="Adjust_85_pz" />
+            <Checkpoint ReferenceId="Adjust_2000_RPM" />
+            <Checkpoint ReferenceId="Airspeed_80_KIAS" />
+        </Page>
+
+        <!-- ============= 14. BASE ============= -->
+        <Page SubjectTT="Base">
+            <Checkpoint ReferenceId="Carbeurator_heating_if_needed" />
+            <Checkpoint ReferenceId="FUEL_PUMP_ON" />
+            <Checkpoint ReferenceId="Flaps_Position_3" />
+            <Checkpoint ReferenceId="Adjust_65_pz" />
+            <Checkpoint ReferenceId="Airspeed_75_KIAS" />
+        </Page>
+
+        <!-- ============= 15. FINAL ============= -->
+        <Page SubjectTT="Final">
+            <Checkpoint ReferenceId="Flaps_Position_5" />
+            <Checkpoint ReferenceId="PROP_RPM_LEVER_MIN" />
+            <Checkpoint ReferenceId="Airspeed_70_KIAS" />
+        </Page>
+
+        <!-- ============= 16. AFTER LANDING ============= -->
+        <Page SubjectTT="After landing">
+            <Checkpoint ReferenceId="Mixture_Normal" />
+            <Checkpoint ReferenceId="Flaps_Position_0" />
+            <Checkpoint ReferenceId="Cowl_Flaps_1_Centimeter" />
+            <Checkpoint ReferenceId="PITOT_HEAT_CHECK_OFF" />
+            <Checkpoint ReferenceId="Radiocompass_off" />
+        </Page>
+
+        <!-- ============= 17. SHUTDOWN ============= -->
+        <Page SubjectTT="Shutdown">
+            <Checkpoint ReferenceId="Parking_Brake_Set" />
+            <Checkpoint ReferenceId="PROP_RPM_LEVER_MIN" />
+            <Checkpoint ReferenceId="Adjust_1500_RPM" />
+            <Checkpoint ReferenceId="THROTTLE_CLOSED" />
+            <Checkpoint ReferenceId="Magnetos_Off" />
+            <Checkpoint ReferenceId="Fuel_valve_closed" />
+            <Checkpoint ReferenceId="Oil_valve_closed" />
+            <Checkpoint ReferenceId="All_Lights_Off" />
+            <Checkpoint ReferenceId="Cage_gyroscopic_instruments" />
+            <Checkpoint ReferenceId="Fuel_Selector_LEFT_Or_RIGHT" />
+            <Checkpoint ReferenceId="Oil_shutter_closed" />
+            <Checkpoint ReferenceId="Cowl_Flaps_Closed" />
+            <Checkpoint ReferenceId="Battery_Switch_Off" />
+        </Page>
+
+    </Checklist.Checklist>
+</SimBase.Document>
