@@ -3,17 +3,17 @@
     <Checklist.CheckpointLibrary>
 
         <!-- ================= PRE-FLIGHT / GENERAL ================= -->
-        <Checkpoint Id="Magnetos_Off">
+        <Checkpoint Id="ATS_MAGNETOS_OFF">
             <CheckpointDesc SubjectTT="Magnetos" ExpectationTT="Off"/>
             <Instrument Id="ELECTRICAL_Switch_Magneto_1"/>
         </Checkpoint>
 
-        <Checkpoint Id="Battery_Switch_Off">
+        <Checkpoint Id="ATS_BATTERY_SWITCH_OFF">
             <CheckpointDesc SubjectTT="Battery switch" ExpectationTT="Off"/>
             <Instrument Id="ELECTRICAL_Switch_Battery_Master"/>
         </Checkpoint>
 
-        <Checkpoint Id="ALL_ELECTRICAL_EQUIPMENT_OFF">
+        <Checkpoint Id="ATS_ALL_ELECTRICAL_EQUIPMENT_OFF">
             <Clue name="TT:CLUE.ALL_ELECTRICAL_EQUIPMENT_OFF"/>
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_ELECTRICAL_EQUIPMENT" ExpectationTT="TT:GAME.CHECKLIST_OFF"/>
             <Sequence SeqType="Unordered">
@@ -116,7 +116,7 @@
             </Sequence>
         </Checkpoint>
 
-        <Checkpoint Id="Cowl_Flaps_Closed">
+        <Checkpoint Id="ATS_COWL_FLAPS_CLOSED">
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_COWL_FLAP" ExpectationTT="TT:GAME.CHECKLIST_CLOSED"/>
             <Test>
                 <Instrument Id="MH_switch_cowl_flap"/>
@@ -139,19 +139,19 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="PROP_RPM_LEVER_MIN">
+        <Checkpoint Id="ATS_PROP_RPM_LEVER_MIN">
             <CheckpointDesc SubjectTT="Prop RPM lever" ExpectationTT="Min"/>
         </Checkpoint>
 
-        <Checkpoint Id="Mixture_Lean">
+        <Checkpoint Id="ATS_MIXTURE_LEAN">
             <CheckpointDesc SubjectTT="Mixture" ExpectationTT="Lean"/>
         </Checkpoint>
 
-        <Checkpoint Id="AUX_FUEL_PUMPS_OFF">
+        <Checkpoint Id="ATS_AUX_FUEL_PUMPS_OFF">
             <CheckpointDesc SubjectTT="Aux fuel pumps" ExpectationTT="Off"/>
         </Checkpoint>
 
-        <Checkpoint Id="Vacuum_Distributors_Open">
+        <Checkpoint Id="ATS_VACUUM_DISTRIBUTORS_OPEN">
             <CheckpointDesc SubjectTT="Vacuum distributors" ExpectationTT="Open"/>
             <Sequence SeqType="Unordered">
                 <Test>
@@ -178,7 +178,7 @@
             </Sequence>
         </Checkpoint>
 
-        <Checkpoint Id="PITOT_STATIC_ISO_VALVE_NORMAL">
+        <Checkpoint Id="ATS_PITOT_STATIC_ISO_VALVE_NORMAL">
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_PITOT_STATIC_ISO_VALVE" ExpectationTT="TT:GAME.CHECKLIST_NORMAL"/>
             <Test>
                 <Instrument Id="SAFETY_Push_AlternateStaticAir"/>
@@ -192,7 +192,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="Generator_Switch_On">
+        <Checkpoint Id="ATS_GENERATOR_SWITCH_ON">
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_GENERATOR_CONTROL_SWITCHES" ExpectationTT="TT:GAME.CHECKLIST_ON"/>
             <Sequence SeqType="Unordered">
                 <Test>
@@ -205,29 +205,29 @@
             </Sequence>
         </Checkpoint>
 
-        <Checkpoint Id="Parking_Brake_Set">
+        <Checkpoint Id="ATS_PARKING_BRAKE_SET">
             <CheckpointDesc SubjectTT="Parking brake" ExpectationTT="Set"/>
         </Checkpoint>
 
-        <Checkpoint Id="Carb_Heat_Cold">
+        <Checkpoint Id="ATS_CARB_HEAT_COLD">
             <CheckpointDesc SubjectTT="Carb heat" ExpectationTT="Cold"/>
         </Checkpoint>
 
-        <Checkpoint Id="Fuel_Selector_Both">
+        <Checkpoint Id="ATS_FUEL_SELECTOR_BOTH">
             <CheckpointDesc SubjectTT="Fuel selector" ExpectationTT="Both"/>
         </Checkpoint>
 
-        <Checkpoint Id="Rudder_Test">
+        <Checkpoint Id="ATS_RUDDER_TEST">
             <CheckpointDesc SubjectTT="Rudder test" ExpectationTT="Test"/>
             <Instrument Id="HANDLING_RudderPedals"/>
         </Checkpoint>
 
-        <Checkpoint Id="CONTROL_STICK_FREE_AND_CORRECT_FULL_TRAVEL">
+        <Checkpoint Id="ATS_CONTROL_STICK_FREE_AND_CORRECT_FULL_TRAVEL">
             <CheckpointDesc SubjectTT="Tab travel" ExpectationTT="Checked"/>
         </Checkpoint>
 
         <!-- ================= BEFORE STARTING ENGINE ================= -->
-        <Checkpoint Id="Main_circuit_breaker">
+        <Checkpoint Id="ATS_MAIN_CIRCUIT_BREAKER">
             <CheckpointDesc SubjectTT="Main circuit breaker" ExpectationTT="On"/>
             <Test>
                 <Instrument Id="MH_lever_ground"/>
@@ -238,12 +238,12 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="Battery_Switch_On">
+        <Checkpoint Id="ATS_BATTERY_SWITCH_ON">
             <Instrument Id="ELECTRICAL_Switch_Battery_Master"/>
             <CheckpointDesc SubjectTT="Battery switch" ExpectationTT="On"/>
         </Checkpoint>
 
-        <Checkpoint Id="Battery_voltage_gt_24v">
+        <Checkpoint Id="ATS_BATTERY_VOLTAGE_GT_24V">
             <CheckpointDesc SubjectTT="Battery voltage" ExpectationTT="24V or more"/>
             <Test>
                 <TestValue>
@@ -253,7 +253,7 @@
             <Instrument Id="ATS_MH_needle_volt"/>
         </Checkpoint>
 
-        <Checkpoint Id="Fuel_switch_open">
+        <Checkpoint Id="ATS_FUEL_SWITCH_OPEN">
             <CheckpointDesc SubjectTT="Fuel switch" ExpectationTT="open"/>
             <Test>
                 <Instrument Id="FUEL_Switch_Cutoff"/>
@@ -264,7 +264,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="Oil_switch_open">
+        <Checkpoint Id="ATS_OIL_SWITCH_OPEN">
             <CheckpointDesc SubjectTT="Oil switch" ExpectationTT="open"/>
             <Test>
                 <Instrument Id="MH_valve_oil"/>
@@ -275,7 +275,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="Cowl_Flaps_1_Centimeter">
+        <Checkpoint Id="ATS_COWL_FLAPS_1_CENTIMETER">
             <CheckpointDesc SubjectTT="Cowl flaps" ExpectationTT="1 centimeter open"/>
             <Test>
                 <Instrument Id="MH_switch_cowl_flap"/>
@@ -290,7 +290,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="Mixture_Rich">
+        <Checkpoint Id="ATS_MIXTURE_RICH">
             <Clue name="TT:CLUE.MIXTURE_RICH"/>
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_MIXTURE" ExpectationTT="TT:GAME.CHECKLIST_RICH"/>
             <Test>
@@ -306,7 +306,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="PROP_RPM_LEVER_MAX">
+        <Checkpoint Id="ATS_PROP_RPM_LEVER_MAX">
             <Clue name="TT:CLUE.PROP_RPM_LEVER_MAX"/>
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_PROP_RPM_LEVER" ExpectationTT="TT:GAME.CHECKLIST_MAX_RPM"/>
             <Test>
@@ -321,7 +321,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="THROTTLE_1_CENTIMETER">
+        <Checkpoint Id="ATS_THROTTLE_1_CENTIMETER">
             <Clue name="TT:CLUE.THROTTLE_1_CENTIMETER"/>
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_THROTTLE" ExpectationTT="TT:GAME.CHECKLIST_1_CENTIMETER"/>
             <Test>
@@ -340,7 +340,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="Manifold_Pressure_Checked">
+        <Checkpoint Id="ATS_MANIFOLD_PRESSURE_CHECKED">
             <CheckpointDesc SubjectTT="Manifold pressure indicated" ExpectationTT="Check"/>
             <Instrument Id="ATS_MH_needle_manifold"/>
             <Test>
@@ -352,12 +352,12 @@
         </Checkpoint>
 
         <!-- ================= ENGINE START ================= -->
-        <Checkpoint Id="Magnetos_On">
+        <Checkpoint Id="ATS_MAGNETOS_ON">
             <CheckpointDesc SubjectTT="Magnetos" ExpectationTT="On"/>
             <Instrument Id="ELECTRICAL_Switch_Magneto_1"/>
         </Checkpoint>
 
-        <Checkpoint Id="FUEL_PUMP_ON">
+        <Checkpoint Id="ATS_FUEL_PUMP_ON">
             <Clue name="Fuel pump on"/>
             <CheckpointDesc SubjectTT="Fuel pump" ExpectationTT="TT:GAME.CHECKLIST_ON"/>
             <Test>
@@ -369,7 +369,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="Fuel_Injections_4times">
+        <Checkpoint Id="ATS_FUEL_INJECTIONS_4TIMES">
             <CheckpointDesc SubjectTT="Primer" ExpectationTT="4 times"/>
             <Val Code="0 (&gt;L:XMLVAR_Prime_amount)"/>
             <Val Code="0 (&gt;L:XMLVAR_Prime_done)"/>
@@ -398,7 +398,7 @@
             <Instrument id="ENGINE_Switch_Primer"/>
         </Checkpoint>
 
-        <Checkpoint Id="Fuel_Injections_2times">
+        <Checkpoint Id="ATS_FUEL_INJECTIONS_2TIMES">
             <CheckpointDesc SubjectTT="Primer" ExpectationTT="2 times"/>
             <Val Code="0 (&gt;L:XMLVAR_Prime_amount)"/>
             <Val Code="0 (&gt;L:XMLVAR_Prime_done)"/>
@@ -433,7 +433,7 @@
             <Instrument id="ENGINE_Lever_Primer"/>
         </Checkpoint>
 
-        <Checkpoint Id="Ignition_on">
+        <Checkpoint Id="ATS_IGNITION_ON">
             <CheckpointDesc SubjectTT="Ignition" ExpectationTT="On"/>
             <Instrument Id="MH_switch_master_ignition_cup"/>
             <Test>
@@ -448,7 +448,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="Ignition_switch_cover">
+        <Checkpoint Id="ATS_IGNITION_SWITCH_COVER">
             <CheckpointDesc SubjectTT="Ignition switch cover" ExpectationTT="Closed, secured"/>
             <Instrument Id="MH_switch_master_ignition_cup"/>
             <Test>
@@ -459,7 +459,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="Starter_On">
+        <Checkpoint Id="ATS_STARTER_ON">
             <Clue name="Starter"/>
             <CheckpointDesc SubjectTT="Starter" ExpectationTT="On"/>
             <Instrument Id="ELECTRICAL_Push_Starter_1"/>
@@ -492,7 +492,7 @@
         </Checkpoint>
 
         <!-- ================= WARM-UP ================= -->
-        <Checkpoint Id="Adjust_1200_RPM">
+        <Checkpoint Id="ATS_ADJUST_1200_RPM">
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_THROTTLE" ExpectationTT="Adjust 1200 RPM"/>
             <Clue name="Adjust 1200 RPM"/>
             <Feedback name="TT:FEEDBACK.ADJUSTING_THROTTLE_RPM" SimVarName="GENERAL ENG RPM:1" Units="rpm"/>
@@ -541,7 +541,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="FUEL_PUMP_OFF">
+        <Checkpoint Id="ATS_FUEL_PUMP_OFF">
             <Clue name="Fuel pump off"/>
             <CheckpointDesc SubjectTT="Fuel pump" ExpectationTT="TT:GAME.CHECKLIST_OFF"/>
             <Test>
@@ -556,7 +556,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="Oil_Temperature_Check">
+        <Checkpoint Id="ATS_OIL_TEMPERATURE_CHECK">
             <Clue name="Oil temperature above 30 degrees C"/>
             <Instrument Id="ATS_MH_needle_oil_temp"/>
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_OIL_TEMPERATURE" ExpectationTT="Above 30C"/>
@@ -582,7 +582,7 @@
         </Checkpoint>
 
         <!-- ================= BEFORE TAXI ================= -->
-        <Checkpoint Id="LIGHTS_AS_REQUIRED">
+        <Checkpoint Id="ATS_LIGHTS_AS_REQUIRED">
             <Clue name="TT:CLUE.LIGHTS_AS_REQUIRED"/>
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_LIGHTS" ExpectationTT="TT:GAME.CHECKLIST_AS_REQUIRED"/>
             <Sequence SeqType="Unordered">
@@ -624,7 +624,7 @@
             </Sequence>
         </Checkpoint>
 
-        <Checkpoint Id="FLAPS_CHECK_FUNCTION_INDICATOR_SET_TO">
+        <Checkpoint Id="ATS_FLAPS_CHECK_FUNCTION_INDICATOR_SET_TO">
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_FLAPS" ExpectationTT="Check"/>
             <Clue name="TT:CLUE.FLAPS_CHECK_FUNCTION_INDICATOR_SET_TO"/>
             <Instrument Id="MH_switch_flap"/>
@@ -632,7 +632,7 @@
             <Instrument Id="MH_flaps_ind"/>
         </Checkpoint>
 
-        <Checkpoint Id="Suction_CHECK">
+        <Checkpoint Id="ATS_SUCTION_CHECK">
             <Instrument Id="ATS_MH_needle_suction"/>
             <CheckpointDesc SubjectTT="Suction 12 to 15 pz" ExpectationTT="TT:GAME.CHECKLIST_CHECK"/>
             <Test>
@@ -647,14 +647,14 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="Clock_Set">
+        <Checkpoint Id="ATS_CLOCK_SET">
             <CheckpointDesc SubjectTT="Clock" ExpectationTT="Set"/>
             <Instrument Id="ATS_MH_disk_clock"/>
             <Instrument Id="MH_disk_clock"/>
             <Instrument Id="MH_disk_clock_touch"/>
         </Checkpoint>
 
-        <Checkpoint Id="Fire_indicator_lamp_tested">
+        <Checkpoint Id="ATS_FIRE_INDICATOR_LAMP_TESTED">
             <CheckpointDesc SubjectTT="Fire indicator lamp" ExpectationTT="Tested"/>
             <Instrument Id="MH_lamp_fire"/>
             <Test>
@@ -673,7 +673,7 @@
       "/>
         </Checkpoint>
 
-        <Checkpoint Id="Low_fuel_level_lamp_left_tested">
+        <Checkpoint Id="ATS_LOW_FUEL_LEVEL_LAMP_LEFT_TESTED">
             <CheckpointDesc SubjectTT="Low fuel level lamp left" ExpectationTT="Tested"/>
             <Instrument Id="MH_lamp_fuel_L"/>
             <Test>
@@ -692,7 +692,7 @@
       "/>
         </Checkpoint>
 
-        <Checkpoint Id="Low_fuel_level_lamp_right_tested">
+        <Checkpoint Id="ATS_LOW_FUEL_LEVEL_LAMP_RIGHT_TESTED">
             <CheckpointDesc SubjectTT="Low fuel level lamp right" ExpectationTT="Tested"/>
             <Instrument Id="MH_lamp_fuel_R"/>
             <Test>
@@ -711,7 +711,7 @@
       "/>
         </Checkpoint>
 
-        <Checkpoint Id="Pitot_heating_lamp_tested">
+        <Checkpoint Id="ATS_PITOT_HEATING_LAMP_TESTED">
             <CheckpointDesc SubjectTT="Pitot heating circuit lamp" ExpectationTT="Tested"/>
             <Instrument Id="DEICE_Switch_PitotHeat"/>
             <Test>
@@ -724,12 +724,12 @@
             <Action Copilot="True" Condition="End" Code="0 (&gt;B:DEICE_Pitot_1_Set)"/>
         </Checkpoint>
 
-        <Checkpoint Id="Radio_checked">
+        <Checkpoint Id="ATS_RADIO_CHECKED">
             <CheckpointDesc SubjectTT="VHF, telephone, radiocompass" ExpectationTT="Tried"/>
             <Instrument Id="ATS_MH_ADF_knob_mode"/>
         </Checkpoint>
 
-        <Checkpoint Id="Attitude_indicator_free">
+        <Checkpoint Id="ATS_ATTITUDE_INDICATOR_FREE">
             <CheckpointDesc SubjectTT="Attitude indicator" ExpectationTT="Free"/>
             <Clue name="Attitude indicator free"/>
             <Instrument Id="MH_knob_att_lock"/>
@@ -741,7 +741,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="Heading_Indicator_Set">
+        <Checkpoint Id="ATS_HEADING_INDICATOR_SET">
             <Clue name="TT:CLUE.HEADING_INDICATOR_SET"/>
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_HEADING_INDICATOR" ExpectationTT="TT:GAME.CHECKLIST_SET"/>
             <Test>
@@ -761,25 +761,25 @@
         </Checkpoint>
 
         <!-- ================= TAXI ================= -->
-        <Checkpoint Id="Wedges_removed">
+        <Checkpoint Id="ATS_WEDGES_REMOVED">
             <CheckpointDesc SubjectTT="Wedges" ExpectationTT="Removed"/>
         </Checkpoint>
 
-        <Checkpoint Id="Parking_Brake_Release">
+        <Checkpoint Id="ATS_PARKING_BRAKE_RELEASE">
             <CheckpointDesc SubjectTT="Parking brake" ExpectationTT="Released"/>
         </Checkpoint>
 
-        <Checkpoint Id="Brakes_Test">
+        <Checkpoint Id="ATS_BRAKES_TEST">
             <CheckpointDesc SubjectTT="Brakes" ExpectationTT="Test"/>
             <Instrument Id="HANDLING_RudderPedals_1"/>
         </Checkpoint>
 
-        <Checkpoint Id="Heading_Indicator_Check_Working">
+        <Checkpoint Id="ATS_HEADING_INDICATOR_CHECK_WORKING">
             <CheckpointDesc SubjectTT="Heading indicator" ExpectationTT="Check working"/>
             <Instrument Id="ATS_MH_dg_cyl"/>
         </Checkpoint>
 
-        <Checkpoint Id="Attitude_Indicator_Check_Working">
+        <Checkpoint Id="ATS_ATTITUDE_INDICATOR_CHECK_WORKING">
             <CheckpointDesc SubjectTT="Attitude indicator" ExpectationTT="Check working"/>
             <Instrument Id="INSTRUMENT_AttitudeIndicator_1"/>
             <Instrument Id="INSTRUMENT_ATTITUDEINDICATOR_1"/>
@@ -789,7 +789,7 @@
         </Checkpoint>
 
         <!-- ================= BEFORE LINE-UP ================= -->
-        <Checkpoint Id="Cylinder_Head_Temperature_Check">
+        <Checkpoint Id="ATS_CYLINDER_HEAD_TEMPERATURE_CHECK">
             <CheckpointDesc SubjectTT="Cylinder head temp > 120C" ExpectationTT="TT:GAME.CHECKLIST_CHECKED"/>
             <SetTemplateValue Id="Low_Value">
                 <Val Value="120"/>
@@ -812,11 +812,11 @@
             <Instrument Id="ATS_MH_needle_cylinder_temp"/>
         </Checkpoint>
 
-        <Checkpoint Id="DIRECTIONAL_TRIM_CENTERED">
+        <Checkpoint Id="ATS_DIRECTIONAL_TRIM_CENTERED">
             <CheckpointDesc SubjectTT="Directional trim" ExpectationTT="Centered"/>
         </Checkpoint>
 
-        <Checkpoint Id="Adjust_1700_RPM">
+        <Checkpoint Id="ATS_ADJUST_1700_RPM">
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_THROTTLE" ExpectationTT="Adjust 1700 RPM"/>
             <Clue name="Adjust 1700 RPM"/>
             <Feedback name="TT:FEEDBACK.ADJUSTING_THROTTLE_RPM" SimVarName="GENERAL ENG RPM:1" Units="rpm"/>
@@ -860,7 +860,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="PROP_RPM_LEVER_CHECK_2_TIMES">
+        <Checkpoint Id="ATS_PROP_RPM_LEVER_CHECK_2_TIMES">
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_PROP_RPM_LEVER" ExpectationTT="TT:GAME.CHECKLIST_CHECK"/>
             <Clue name="Move Propeller RPM lever throug complete range 2 times"/>
             <Instrument Id="ENGINE_Lever_Propeller"/>
@@ -928,7 +928,7 @@
             </Sequence>
         </Checkpoint>
 
-        <Checkpoint Id="Magneto_75_RPM_Max_Decrease_variant">
+        <Checkpoint Id="ATS_MAGNETO_75_RPM_MAX_DECREASE_VARIANT">
             <Clue name="Engine at 2000 RPM should drop ~75 RPM when switching magneto"/>
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_MAGNETOS" ExpectationTT="75 RPM max decrease"/>
             <Instrument Id="ENGINE_Switch_Master"/>
@@ -1107,7 +1107,7 @@
             </Sequence>
         </Checkpoint>
 
-        <Checkpoint Id="Cowl_flap_closed_or_as_required">
+        <Checkpoint Id="ATS_COWL_FLAP_CLOSED_OR_AS_REQUIRED">
             <Clue Name="TT:CLUE.COWL_FLAP_FULL_CLOSED_OR_AS_REQUIRED"/>
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_COWL_FLAP" ExpectationTT="TT:GAME.CHECKLIST_SET_AS_REQUIRED"/>
             <SetTemplateValue Id="Open_Pct">
@@ -1137,7 +1137,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="Oil_Pressure_Check">
+        <Checkpoint Id="ATS_OIL_PRESSURE_CHECK">
             <CheckpointDesc SubjectTT="Electrical bus voltage" ExpectationTT="TT:GAME.CHECKLIST_CHECK"/>
             <SetTemplateValue Id="Green_low_value">
                 <Val value="46"/>
@@ -1148,14 +1148,14 @@
             <Instrument Id="ATS_MH_needle_oil_pressure"/>
         </Checkpoint>
 
-        <Checkpoint Id="FUEL_PRESSURE_CHECK_NO_HIGHLIGHT">
+        <Checkpoint Id="ATS_FUEL_PRESSURE_CHECK_NO_HIGHLIGHT">
             <SetTemplateValue Id="Low_Value">
                 <Val Value="4"/>
             </SetTemplateValue>
             <Instrument Id="ATS_MH_needle_fuel_pressure"/>
         </Checkpoint>
 
-        <Checkpoint Id="Bus_Voltages_Check">
+        <Checkpoint Id="ATS_BUS_VOLTAGES_CHECK">
             <Instrument Id="ATS_MH_needle_volt"/>
             <CheckpointDesc SubjectTT="Electrical bus voltage" ExpectationTT="TT:GAME.CHECKLIST_CHECK"/>
             <Feedback name="Bus voltage should be between 28 and 29 volts. Current voltage... %.0f V" SimVarName="ELECTRICAL BATTERY VOLTAGE" Units="volts"/>
@@ -1171,7 +1171,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="Engine_Idle_Check_600-700_RPM">
+        <Checkpoint Id="ATS_ENGINE_IDLE_CHECK_600_RPM">
             <Clue name="TT:CLUE.ENGINE_IDLE_CHECK_600-650_RPM"/>
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_ENGINE_IDLE" ExpectationTT="TT:GAME.CHECKLIST_CHECK_500_700RPM"/>
             <Test>
@@ -1195,7 +1195,7 @@
         </Checkpoint>
 
         <!-- ================= NORMAL TAKEOFF ================= -->
-        <Checkpoint Id="Throttle_Full">
+        <Checkpoint Id="ATS_THROTTLE_FULL">
             <Clue name="TT:CLUE.THROTTLE_FULL"/>
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_THROTTLE" ExpectationTT="TT:GAME.CHECKLIST_FULL"/>
             <Test>
@@ -1213,7 +1213,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="ROTATION_MIN_XXX_KIAS">
+        <Checkpoint Id="ATS_ROTATION_MIN_XXX_KIAS">
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_ROTATION" ExpectationTT="TT:GAME.CHECKLIST_MIN_60_KIAS"/>
             <SetTemplateValue Id="Desired_Rotation_KIAS">
                 <Val Value="60"/>
@@ -1221,14 +1221,14 @@
         </Checkpoint>
 
         <!-- ================= CLIMB ================= -->
-        <Checkpoint Id="INITIAL_CLIMB_MIN_XXX_KIAS_TEMPLATE">
+        <Checkpoint Id="ATS_INITIAL_CLIMB_MIN_XXX_KIAS_TEMPLATE">
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_INITIAL_CLIMB" ExpectationTT="TT:GAME.CHECKLIST_MIN_80_KIAS"/>
             <SetTemplateValue Id="Low_Value">
                 <Val Value="80"/>
             </SetTemplateValue>
         </Checkpoint>
 
-        <Checkpoint Id="Adjust_105_pz">
+        <Checkpoint Id="ATS_ADJUST_105_PZ">
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_THROTTLE" ExpectationTT="Adjust 105 pz"/>
             <Clue name="Adjust 105 pz"/>
             <Feedback name="Adjusting manifold pressure" SimVarName="ENG MANIFOLD PRESSURE:1" Units="kilopascal"/>
@@ -1276,7 +1276,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="Adjust_2000_RPM">
+        <Checkpoint Id="ATS_ADJUST_2000_RPM">
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_PROP_RPM_LEVER" ExpectationTT="Adjust 2000 RPM"/>
             <Clue name="Adjust 2000 RPM"/>
             <Feedback name="TT:FEEDBACK.ADJUSTING_THROTTLE_RPM" SimVarName="GENERAL ENG RPM:1" Units="rpm"/>
@@ -1322,7 +1322,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="Airspeed_75_KIAS">
+        <Checkpoint Id="ATS_AIRSPEED_75_KIAS">
             <Clue name="TT:CLUE.AIRSPEED_80_KIAS"/>
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_AIRSPEED" ExpectationTT="TT:GAME.CHECKLIST_75_KIAS"/>
             <Test>
@@ -1340,7 +1340,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="Airspeed_80_KIAS">
+        <Checkpoint Id="ATS_AIRSPEED_80_KIAS">
             <Clue name="TT:CLUE.AIRSPEED_80_KIAS"/>
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_AIRSPEED" ExpectationTT="TT:GAME.CHECKLIST_80_KIAS"/>
             <Test>
@@ -1358,7 +1358,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="Cowl_flaps_full_open">
+        <Checkpoint Id="ATS_COWL_FLAPS_FULL_OPEN">
             <CheckpointDesc SubjectTT="Cowl flaps" ExpectationTT="Full open"/>
             <Clue Name="Cowl flaps full open"/>
             <Test>
@@ -1374,7 +1374,7 @@
             <Instrument Id="MH_switch_cowl_flap"/>
         </Checkpoint>
 
-        <Checkpoint Id="Oil_Temperature_Check_50_90">
+        <Checkpoint Id="ATS_OIL_TEMPERATURE_CHECK_50_90">
             <Clue name="TT:CLUE.OIL_TEMPERATURE_CHECK"/>
             <CheckpointDesc SubjectTT="Oil temperature between 50 and 90 C" ExpectationTT="TT:GAME.CHECKLIST_CHECK"/>
             <Instrument Id="ATS_MH_needle_oil_temp"/>
@@ -1398,12 +1398,12 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="Carbeurator_heating_if_needed">
+        <Checkpoint Id="ATS_CARBEURATOR_HEATING_IF_NEEDED">
             <CheckpointDesc SubjectTT="Carbeurator heating" ExpectationTT="If needed"/>
             <Instrument Id="DEICE_Engine"/>
         </Checkpoint>
 
-        <Checkpoint Id="Mixture_Normal">
+        <Checkpoint Id="ATS_MIXTURE_NORMAL">
             <Clue name="Mixture normal"/>
             <CheckpointDesc SubjectTT="Mixture normal" ExpectationTT="Set"/>
             <Test>
@@ -1419,7 +1419,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="Adjust_88_pz">
+        <Checkpoint Id="ATS_ADJUST_88_PZ">
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_THROTTLE" ExpectationTT="Adjust 88 pz"/>
             <Clue name="Adjust 88 pz"/>
             <Feedback name="Adjusting manifold pressure" SimVarName="ENG MANIFOLD PRESSURE:1" Units="kilopascal"/>
@@ -1468,7 +1468,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="Adjust_1900_RPM">
+        <Checkpoint Id="ATS_ADJUST_1900_RPM">
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_PROP_RPM_LEVER" ExpectationTT="Adjust 1900 RPM"/>
             <Clue name="Adjust 1900 RPM"/>
             <Feedback name="TT:FEEDBACK.ADJUSTING_THROTTLE_RPM" SimVarName="GENERAL ENG RPM:1" Units="rpm"/>
@@ -1514,7 +1514,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="Airspeed_100_KIAS">
+        <Checkpoint Id="ATS_AIRSPEED_100_KIAS">
             <Clue name="TT:CLUE.AIRSPEED_100_KIAS"/>
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_AIRSPEED" ExpectationTT="TT:GAME.CHECKLIST_100_KIAS"/>
             <Test>
@@ -1534,7 +1534,7 @@
         </Checkpoint>
 
         <!-- ================= DESCENT ================= -->
-        <Checkpoint Id="Adjust_60_pz">
+        <Checkpoint Id="ATS_ADJUST_60_PZ">
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_THROTTLE" ExpectationTT="Adjust 60 pz"/>
             <Clue name="Adjust 60 pz"/>
             <Feedback name="Adjusting manifold pressure" SimVarName="ENG MANIFOLD PRESSURE:1" Units="kilopascal"/>
@@ -1584,14 +1584,14 @@
         </Checkpoint>
 
         <!-- ================= BEFORE LANDING & PATTERN ================= -->
-        <Checkpoint Id="FUEL_PRESSURE_CHECK_NO_HIGHLIGHT">
+        <Checkpoint Id="ATS_FUEL_PRESSURE_CHECK">
             <SetTemplateValue Id="Low_Value">
                 <Val Value="4"/>
             </SetTemplateValue>
             <Instrument Id="ATS_MH_needle_fuel_pressure"/>
         </Checkpoint>
 
-        <Checkpoint Id="Flaps_Position_2">
+        <Checkpoint Id="ATS_FLAPS_POSITION_2">
             <Clue name="15 degrees"/>
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_FLAPS" ExpectationTT="15 degrees"/>
             <Test>
@@ -1608,7 +1608,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="Adjust_85_pz">
+        <Checkpoint Id="ATS_ADJUST_85_PZ">
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_THROTTLE" ExpectationTT="Adjust 85 pz"/>
             <Clue name="Adjust 85 pz"/>
             <Feedback name="Adjusting manifold pressure" SimVarName="ENG MANIFOLD PRESSURE:1" Units="kilopascal"/>
@@ -1657,7 +1657,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="Airspeed_80_KIAS">
+        <Checkpoint Id="ATS_AIRSPEED_80_KIAS">
             <Clue name="TT:CLUE.AIRSPEED_80_KIAS"/>
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_AIRSPEED" ExpectationTT="TT:GAME.CHECKLIST_80_KIAS"/>
             <Test>
@@ -1675,7 +1675,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="Flaps_Position_3">
+        <Checkpoint Id="ATS_FLAPS_POSITION_3">
             <Clue name="30 degrees"/>
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_FLAPS" ExpectationTT="30 degrees"/>
             <Test>
@@ -1692,7 +1692,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="Adjust_65_pz">
+        <Checkpoint Id="ATS_ADJUST_65_PZ">
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_THROTTLE" ExpectationTT="Adjust 65 pz"/>
             <Clue name="Adjust 65 pz"/>
             <Feedback name="Adjusting manifold pressure" SimVarName="ENG MANIFOLD PRESSURE:1" Units="kilopascal"/>
@@ -1741,7 +1741,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="Airspeed_75_KIAS">
+        <Checkpoint Id="ATS_AIRSPEED_75_KIAS">
             <Clue name="TT:CLUE.AIRSPEED_75_KIAS"/>
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_AIRSPEED" ExpectationTT="TT:GAME.CHECKLIST_75_KIAS"/>
             <Test>
@@ -1759,7 +1759,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="Flaps_Position_5">
+        <Checkpoint Id="ATS_FLAPS_POSITION_5">
             <Clue name="50 degrees"/>
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_FLAPS" ExpectationTT="50 degrees"/>
             <Test>
@@ -1776,7 +1776,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="Airspeed_70_KIAS">
+        <Checkpoint Id="ATS_AIRSPEED_70_KIAS">
             <Clue name="TT:CLUE.AIRSPEED_70_KIAS"/>
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_AIRSPEED" ExpectationTT="TT:GAME.CHECKLIST_70_KIAS"/>
             <Test>
@@ -1795,7 +1795,7 @@
         </Checkpoint>
 
         <!-- ================= AFTER LANDING ================= -->
-        <Checkpoint Id="Flaps_Position_0">
+        <Checkpoint Id="ATS_FLAPS_POSITION_0">
             <Clue name="Up"/>
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_FLAPS" ExpectationTT="Up"/>
             <Test>
@@ -1812,11 +1812,11 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="PITOT_HEAT_CHECK_OFF">
+        <Checkpoint Id="ATS_PITOT_HEAT_CHECK_OFF">
             <CheckpointDesc SubjectTT="Pitot heat" ExpectationTT="Off"/>
         </Checkpoint>
 
-        <Checkpoint Id="Radiocompass_off">
+        <Checkpoint Id="ATS_RADIOCOMPASS_OFF">
             <CheckpointDesc SubjectTT="ADF off" ExpectationTT="Check"/>
             <Test>
                 <Instrument Id="MH_ADF_knob_mode_touch"/>
@@ -1830,7 +1830,7 @@
         </Checkpoint>
 
         <!-- ================= SHUTDOWN ================= -->
-        <Checkpoint Id="Adjust_1500_RPM">
+        <Checkpoint Id="ATS_ADJUST_1500_RPM">
             <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_THROTTLE" ExpectationTT="Adjust 1500 RPM"/>
             <Clue name="Adjust 1500 RPM"/>
             <Feedback name="TT:FEEDBACK.ADJUSTING_THROTTLE_RPM" SimVarName="GENERAL ENG RPM:1" Units="rpm"/>
@@ -1875,11 +1875,11 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="THROTTLE_CLOSED">
+        <Checkpoint Id="ATS_THROTTLE_CLOSED">
             <CheckpointDesc SubjectTT="Throttle" ExpectationTT="Closed"/>
         </Checkpoint>
 
-        <Checkpoint Id="Fuel_valve_closed">
+        <Checkpoint Id="ATS_FUEL_VALVE_CLOSED">
             <CheckpointDesc SubjectTT="Fuel valve closed" ExpectationTT="Check"/>
             <Test>
                 <TestValue>
@@ -1892,7 +1892,7 @@
             <Instrument Id="FUEL_Switch_Cutoff"/>
         </Checkpoint>
 
-        <Checkpoint Id="Oil_valve_closed">
+        <Checkpoint Id="ATS_OIL_VALVE_CLOSED">
             <CheckpointDesc SubjectTT="Oil valve closed" ExpectationTT="Check"/>
             <Instrument Id="MH_valve_oil"/>
             <Test>
@@ -1905,7 +1905,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="All_Lights_Off">
+        <Checkpoint Id="ATS_ALL_LIGHTS_OFF">
             <Clue name="All lights off"/>
             <CheckpointDesc SubjectTT="All lights off" ExpectationTT="Check"/>
             <Sequence SeqType="Unordered">
@@ -1955,7 +1955,7 @@
             </Sequence>
         </Checkpoint>
 
-        <Checkpoint Id="Cage_gyroscopic_instruments">
+        <Checkpoint Id="ATS_CAGE_GYROSCOPIC_INSTRUMENTS">
             <CheckpointDesc SubjectTT="Gyroscopic instruments caged" ExpectationTT="Check"/>
             <Instrument Id="MH_knob_att_lock"/>
             <Instrument Id="MH_knob_dg"/>
@@ -1968,7 +1968,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="Fuel_Selector_LEFT_Or_RIGHT">
+        <Checkpoint Id="ATS_FUEL_SELECTOR_LEFT_OR_RIGHT">
             <Clue name="Fuel selector left or right"/>
             <CheckpointDesc SubjectTT="Fuel selector - left or right tank" ExpectationTT="Check"/>
             <Test>
@@ -1984,7 +1984,7 @@
             </Test>
         </Checkpoint>
 
-        <Checkpoint Id="Oil_shutter_closed">
+        <Checkpoint Id="ATS_OIL_SHUTTER_CLOSED">
             <CheckpointDesc SubjectTT="Oil radiator shutters" ExpectationTT="TT:GAME.CHECKLIST_CLOSED"/>
             <Clue name="Close oil radiator shutters"/>
             <Test>
@@ -1999,10 +1999,80 @@
             <Instrument Id="MH_oil_shutter"/>
         </Checkpoint>
 
-        <!-- Redefining from preflight for completeness if needed -->
-        <Checkpoint Id="Battery_Switch_Off_Shutdown">
-            <CheckpointDesc SubjectTT="Battery switch" ExpectationTT="Off"/>
-            <Instrument Id="ELECTRICAL_Switch_Battery_Master"/>
+        <Checkpoint Id="ATS_ADJUST_RPM">
+            <!-- Parameter to specify the target RPM. Default can be any typical value. -->
+            <Parameter Name="RPM_TARGET" DefaultValue="1500" />
+
+            <CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_THROTTLE"
+                            ExpectationTT="Adjust to target RPM"/>
+
+            <Clue name="Adjust #Parameter(RPM_TARGET) RPM" />
+
+            <!-- Feedback message showing current engine RPM while adjusting. -->
+            <Feedback name="TT:FEEDBACK.ADJUSTING_THROTTLE_RPM"
+                      SimVarName="GENERAL ENG RPM:1"
+                      Units="rpm" />
+
+            <!-- Initialize a local variable to track if we've done the first adjustment yet. -->
+            <Action Condition="Init"
+                    Code="1 (&gt;L:IsFirstRPMAdjustment)" />
+
+            <!-- Store current RPM in a template value for comparison. -->
+            <SetTemplateValue Id="RPM_Value">
+                <Val Code="(A:GENERAL ENG RPM:1,rpm)" />
+            </SetTemplateValue>
+
+            <Test>
+                <TestValue>
+                    <!-- Compare current RPM to the parameterized target (within ±50 RPM). -->
+                    <Operator OpType="EQUAL" Tolerance="50">
+                        <Val UseTemplateValue="RPM_Value"/>
+                        <Val UseParameter="RPM_TARGET"/>
+                    </Operator>
+                </TestValue>
+
+                <!-- We’ll monitor the RPM for up to 10 seconds or until it's within tolerance. -->
+                <Duration Value="10.0" Cumulative="False"/>
+
+                <!-- Throttle instrument references. Add or remove as needed. -->
+                <Instrument Id="ENGINE_Lever_Throttle"/>
+                <Instrument Id="ENGINE_Lever_Throttle_Copilot"/>
+                <Instrument Id="ENGINE_Lever_Throttle1"/>
+                <Instrument Id="ENGINE_Lever_Throttle2"/>
+
+                <!-- RPN code that increments/decrements the throttle until we reach the target. -->
+                <Action Copilot="True"
+                        Condition="TestValueFalse"
+                        Once="false"
+                        Code="
+      (L:CheckListThrottle_NextCheckTime) (E:SIMULATION TIME, seconds) &lt; if{
+        (L:IsFirstRPMAdjustment) if{
+          0.5 (&gt;B:ENGINE_Throttle_1_Set)
+          0 (&gt;L:IsFirstRPMAdjustment)
+          (E:SIMULATION TIME, seconds) 5.0 + (&gt;L:CheckListThrottle_NextCheckTime)
+        } els{
+          (A:GENERAL ENG RPM:1,rpm) sp1
+          l1 (L:ChecklistThrottle_LastRPM) - (&gt;L:ChecklistThrottle_DeltaRPM)
+
+          (L:ChecklistThrottle_DeltaRPM) abs 5 &lt;
+          l1 #Parameter(RPM_TARGET) - abs (L:ChecklistThrottle_LastDeltaToTargetRPM) abs >
+          or if{
+            l1 #Parameter(RPM_TARGET) &lt; if{
+              1 (&gt;B:ENGINE_Throttle_1_Inc)
+            } els{
+              l1 #Parameter(RPM_TARGET) &gt; if{
+                1 (&gt;B:ENGINE_Throttle_1_Dec)
+              }
+            }
+          }
+
+          l1 (&gt;L:ChecklistThrottle_LastRPM)
+          l1 #Parameter(RPM_TARGET) - (&gt;L:ChecklistThrottle_LastDeltaToTargetRPM)
+          (E:SIMULATION TIME, seconds) 1.0 + (&gt;L:CheckListThrottle_NextCheckTime)
+        }
+      }
+    "/>
+            </Test>
         </Checkpoint>
 
     </Checklist.CheckpointLibrary>

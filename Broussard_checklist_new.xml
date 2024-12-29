@@ -51,10 +51,10 @@
 
         <!-- WARM-UP -->
         <Page SubjectTT="Warm-up">
-            <Checkpoint ReferenceId="ATS_PROP_RPM_LEVER_MAX" />
+            <Checkpoint ReferenceId="PROP_RPM_LEVER_MAX" />
             <Checkpoint ReferenceId="ATS_ADJUST_1200_RPM" />
             <Checkpoint ReferenceId="ATS_FUEL_PUMP_OFF" />
-            <Checkpoint ReferenceId="ATS_MIXTURE_RICH" />
+            <Checkpoint ReferenceId="MIXTURE_RICH" />
             <Checkpoint ReferenceId="ATS_OIL_TEMPERATURE_CHECK" />
         </Page>
 
@@ -71,8 +71,8 @@
             <Checkpoint ReferenceId="ATS_RADIO_CHECKED" />
             <Checkpoint ReferenceId="ATS_ATTITUDE_INDICATOR_FREE" />
             <Checkpoint ReferenceId="ATS_HEADING_INDICATOR_SET" />
-            <Checkpoint ReferenceId="ATS_MIXTURE_RICH" />
-            <Checkpoint ReferenceId="ATS_PROP_RPM_LEVER_MAX" />
+            <Checkpoint ReferenceId="MIXTURE_RICH" />
+            <Checkpoint ReferenceId="PROP_RPM_LEVER_MAX" />
         </Page>
 
         <!-- TAXI -->
@@ -86,10 +86,10 @@
 
         <!-- BEFORE LINE-UP -->
         <Page SubjectTT="Before line-up">
-            <Checkpoint ReferenceId="ATS_OIL_TEMPERATURE_CHECK" />
+            <Checkpoint ReferenceId="OIL_TEMPERATURE_CHECK" />
             <Checkpoint ReferenceId="ATS_CYLINDER_HEAD_TEMPERATURE_CHECK" />
             <Checkpoint ReferenceId="ATS_DIRECTIONAL_TRIM_CENTERED" />
-            <Checkpoint ReferenceId="ATS_MIXTURE_RICH" />
+            <Checkpoint ReferenceId="MIXTURE_RICH" />
             <Checkpoint ReferenceId="ATS_ADJUST_1700_RPM" />
             <Checkpoint ReferenceId="ATS_PROP_RPM_LEVER_CHECK_2_TIMES" />
             <Checkpoint ReferenceId="ATS_MAGNETO_75_RPM_MAX_DECREASE_VARIANT" />
@@ -98,12 +98,12 @@
             <Checkpoint ReferenceId="ATS_FUEL_PRESSURE_CHECK_NO_HIGHLIGHT" />
             <Checkpoint ReferenceId="ATS_SUCTION_CHECK" />
             <Checkpoint ReferenceId="ATS_BUS_VOLTAGES_CHECK" />
-            <Checkpoint ReferenceId="ATS_ENGINE_IDLE_CHECK_600-700_RPM" />
+            <Checkpoint ReferenceId="ATS_ENGINE_IDLE_CHECK_600_RPM" />
         </Page>
 
         <!-- NORMAL TAKEOFF -->
         <Page SubjectTT="Normal takeoff">
-            <Checkpoint ReferenceId="ATS_PARKING_BRAKE_RELEASE" />
+            <Checkpoint ReferenceId="PARKING_BRAKE_RELEASE" />
             <Checkpoint ReferenceId="ATS_THROTTLE_FULL" />
             <Checkpoint ReferenceId="ATS_ROTATION_MIN_XXX_KIAS" />
         </Page>
@@ -140,11 +140,11 @@
 
         <!-- BEFORE LANDING -->
         <Page SubjectTT="Before landing">
-            <Checkpoint ReferenceId="ATS_PARKING_BRAKE_RELEASE" />
-            <Checkpoint ReferenceId="ATS_BRAKES_TEST" />
-            <Checkpoint ReferenceId="ATS_MIXTURE_RICH" />
-            <Checkpoint ReferenceId="ATS_FUEL_PRESSURE_CHECK_NO_HIGHLIGHT" />
-            <Checkpoint ReferenceId="ATS_FUEL_SELECTOR_BOTH" />
+            <Checkpoint ReferenceId="PARKING_BRAKE_RELEASE" />
+            <Checkpoint ReferenceId="BRAKES_TEST" />
+            <Checkpoint ReferenceId="MIXTURE_RICH" />
+            <Checkpoint ReferenceId="ATS_FUEL_PRESSURE_CHECK" />
+            <Checkpoint ReferenceId="FUEL_SELECTOR_BOTH" />
         </Page>
 
         <!-- DOWNWIND -->
@@ -158,7 +158,7 @@
         <!-- BASE -->
         <Page SubjectTT="Base">
             <Checkpoint ReferenceId="ATS_CARBEURATOR_HEATING_IF_NEEDED" />
-            <Checkpoint ReferenceId="ATS_FUEL_PUMP_ON" />
+            <Checkpoint ReferenceId="FUEL_PUMP_ON" />
             <Checkpoint ReferenceId="ATS_FLAPS_POSITION_3" />
             <Checkpoint ReferenceId="ATS_ADJUST_65_PZ" />
             <Checkpoint ReferenceId="ATS_AIRSPEED_75_KIAS" />
@@ -182,7 +182,7 @@
 
         <!-- SHUTDOWN -->
         <Page SubjectTT="Shutdown">
-            <Checkpoint ReferenceId="ATS_PARKING_BRAKE_SET" />
+            <Checkpoint ReferenceId="PARKING_BRAKE_SET" />
             <Checkpoint ReferenceId="ATS_PROP_RPM_LEVER_MIN" />
             <Checkpoint ReferenceId="ATS_ADJUST_1500_RPM" />
             <Checkpoint ReferenceId="ATS_THROTTLE_CLOSED" />
